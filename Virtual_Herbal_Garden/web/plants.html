@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Virtual Herbal Garden - Plants</title>
+    <link rel="stylesheet" href="plants.css">
+    <style>
+        
+        .nv-bar{
+            display: flex;  
+            justify-content: space-between
+        }
+        .nv-btn{
+          margin-top: 10px;  
+          /* color: black; */
+        }
+           
+        .title{
+            color: #4a7c59;
+            margin-left: 60px;
+        }
+        </style>
+    
+    
+</head>
+<body>
+    <header>
+        
+        
+        <div class="nv-bar" id="buttons-container">
+            <!--<a href="plants.html" class="nav-button">Plants</a>-->
+            
+                <h1 class="title">Plants</h1>
+                
+                
+                <div class="nv-btn">
+
+                <a href="index.html" class="nav-button "><b>Home</b></a>
+                 <a href="yoga.html" class="nav-button "> <b>Yoga</b>  </a>
+                 
+                 </div>
+
+                 
+        </div>
+    </header>
+
+    <main>
+      
+        <input type="text" id="search-bar" placeholder="Search plants...">
+        <div id="plant-container">
+         
+        </div>
+        <p id="no-results" style="display: none;">Sorry, no plants found</p>
+    </main>
+
+    <footer>
+        <p>   Virtual Herbal Garden</p>
+        
+    </footer>
+
+    <script src="plants.js"></script>
+</body>
+</html>

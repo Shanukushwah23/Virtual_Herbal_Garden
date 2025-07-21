@@ -1,0 +1,117 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #eef5e3; */
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    /* background-color: #eef5e3; */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#buttons-container {
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    /* background-color: #4a7c59; */
+    color: #4a7c59;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: #3a5e47;
+    color: rgb(255, 255, 255);
+  
+}
+
+/* main {
+    padding: 20px;
+} */
+
+h2 {
+    text-align: center;
+    color: #4a7c59;
+}
+
+#search-bar, #search-bar-med {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 20rem;
+    /* margin-bottom: 25rem; */
+}
+
+#plant-container, #med-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.plant, .medication {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant:hover, .medication:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+}
+
+.plant img, .medication img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #4a7c59;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 40px;
+}
+
+#no-results {
+    text-align: center;
+    color: red;
+}
