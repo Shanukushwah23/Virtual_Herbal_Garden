@@ -1,0 +1,4 @@
+*.[200~[[:space:]]Virtual_Herbal_Garden/
+~
+ filter=lfs diff=lfs merge=lfs -text
+.[[:space:]]Virtual_Herbal_Garden/ filter=lfs diff=lfs merge=lfs -text
