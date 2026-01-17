@@ -1,8 +1,8 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 
 WORKDIR /app
 
-# Project folder copy karo
+# Project copy
 COPY Virtual_Herbal_Garden/ .
 
 # Ant install + build
