@@ -1,20 +1,19 @@
-# Use official OpenJDK
+# Base image
 FROM openjdk:17-jdk-slim
 
-# Set working directory
+# App directory
 WORKDIR /app
 
-# Copy all project files
+# Copy project
 COPY . .
 
-# Build project using Ant
+# Install Ant & build project
 RUN apt-get update && \
     apt-get install -y ant && \
     ant
 
-# Expose port (change if needed)
+# Expose app port
 EXPOSE 8080
 
-# Run the generated JAR
+# Run generated JAR
 CMD ["java", "-jar", "dist/Virtual_Herbal_Garden.jar"]
-
