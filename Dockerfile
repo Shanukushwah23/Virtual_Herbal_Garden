@@ -1,21 +1,14 @@
-# ----------- BUILD STAGE -----------
 FROM maven:3.9.6-eclipse-temurin-17 AS build
-
 WORKDIR /app
 
-COPY pom.xml .
-COPY src ./src
+COPY Virtual_Herbal_Garden/pom.xml .
+COPY Virtual_Herbal_Garden/src ./src
 
 RUN mvn clean package -DskipTests
 
-
-# ----------- RUN STAGE -------------
 FROM eclipse-temurin:17-jdk
-
 WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
-
 EXPOSE 8080
-
 ENTRYPOINT ["java", "-jar", "app.jar"]
