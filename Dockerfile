@@ -1,16 +1,9 @@
-FROM eclipse-temurin:17-jdk-jammy
+FROM eclipse-temurin:17-jre-jammy
 
 WORKDIR /app
 
-COPY Virtual_Herbal_Garden/ Virtual_Herbal_Garden/
-
-RUN apt-get update && apt-get install -y ant
-
-WORKDIR /app/Virtual_Herbal_Garden
-
-# Clean + build project
-RUN ant clean || true
-RUN ant jar || ant dist
+# Sirf dist folder copy karo
+COPY Virtual_Herbal_Garden/dist ./dist
 
 EXPOSE 8080
 
