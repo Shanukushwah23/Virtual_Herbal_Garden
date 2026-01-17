@@ -1,14 +1,9 @@
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-# Copy dist folder
-COPY Virtual_Herbal_Garden/dist ./dist
+COPY src ./src
 
-# Debug: show files (Render logs me dikhega)
-RUN ls -l dist || true
+RUN javac src/Main.java
 
-EXPOSE 8080
-
-# Auto-detect jar and run
-CMD sh -c 'JAR=$(ls dist/*.jar 2>/dev/null | head -n 1) && echo "Running $JAR" && java -jar "$JAR"'
+CMD ["java", "-cp", "src", "Main"]
