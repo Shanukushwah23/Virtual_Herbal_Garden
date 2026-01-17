@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM eclipse-temurin:17-jdk-focal AS builder
+FROM eclipse-temurin:21-jdk-focal AS builder
 
 # Set working directory
 WORKDIR /app
